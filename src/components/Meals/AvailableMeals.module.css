@@ -1,0 +1,75 @@
+.meals {
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
+}
+
+.mealsIsLoading {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.mealsError {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  color: rgb(209, 31, 31);
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.mealsError p {
+  display: inline-block;
+}
+.mealsError button {
+  padding: 10px 20px;
+  background-color: white;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all ease 0.25s;
+}
+
+.mealsError button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mealsError button:active {
+  transform: translateY(2px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.meals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 800px) {
+  .mealsError {
+    flex-direction: column;
+  }
+  .mealsError button {
+    font-size: 2rem;
+    width: 50vw;
+  }
+} ;

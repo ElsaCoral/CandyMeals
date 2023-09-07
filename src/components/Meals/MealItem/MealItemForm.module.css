@@ -1,0 +1,29 @@
+.form {
+  text-align: right;
+}
+
+.form button {
+  display: block;
+  width: 100%;
+  font: inherit;
+  cursor: pointer;
+  background-color: #43b3ae;
+  border: 1px solid #43b3ae;
+  color: white;
+  padding: 0.25rem 2.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 0.25rem;
+}
+
+.form button:hover,
+.form button:active {
+  background-color: #5dc1b9;
+  border-color: #5dc1b9;
+}
+
+@media (max-width: 500px) {
+  .form button {
+    margin-top: 2rem;
+  }
+}
